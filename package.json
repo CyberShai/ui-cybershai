@@ -13,7 +13,8 @@
     "start": "webpack-dev-server --hot --mode development --open",
     "test": "jest",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "lint": "eslint . --fix"
   },
   "dependencies": {
     "react": "^16.13.1",
@@ -30,16 +31,35 @@
     "babel-jest": "^26.3.0",
     "babel-loader": "^8.1.0",
     "css-loader": "^4.2.2",
+    "eslint": "^7.15.0",
+    "eslint-config-prettier": "^7.0.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.21.5",
     "file-loader": "^6.1.0",
     "html-webpack-plugin": "^4.4.1",
+    "husky": "^4.3.6",
     "jest": "^26.4.2",
+    "lint-staged": "^10.5.3",
     "mini-css-extract-plugin": "^0.11.0",
     "node-sass": "^4.14.1",
+    "prettier": "^2.2.1",
     "sass-loader": "^10.0.2",
     "style-loader": "^1.2.1",
     "url-loader": "^4.1.0",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.{js,css,md}": "prettier --write"
   }
 }
