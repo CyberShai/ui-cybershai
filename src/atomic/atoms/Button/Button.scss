@@ -1,0 +1,44 @@
+.button {
+  border-radius: 8px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  &__primary {
+    background-color: $primary;
+    color: $primary-lightest;
+  }
+
+  &__secondary {
+    background-color: $secondary-lightest;
+    color: $secondary-darkest;
+  }
+
+  &__tertiary {
+    background-color: $secondary-dark;
+    color: $secondary-lightest;
+  }
+
+  &__back {
+    background-color: $primary;
+    color: $white;
+    border: solid 2px $secondary-dark;
+    box-shadow: 4px 4px 4px #88887fa3;
+  }
+
+  &-type__simple {
+    padding: 11px 32px;
+  }
+
+  &-type__form {
+    padding: 11px 96px;
+  }
+
+  &-type__back {
+    padding: 16px 80px;
+  }
+}
