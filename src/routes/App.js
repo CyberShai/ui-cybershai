@@ -1,13 +1,15 @@
 import React from "react";
 
-import { IconText } from "../atomic/atoms/IconText/IconText"
+import { Menu } from "../atomic/molecules/Menu/Menu";
 
 const App = () => {
-  return <>
-  <h3>Atomos Héctor</h3>
-  <IconText icon="github" text="Icono de Menú" link="#" color/>
-  <IconText icon="github" text="Icono de Menú" link="#" />
-  </>
+  return (
+    <>
+      <h3>Atomos Héctor</h3>
+      <Menu user="student" />
+      <Menu user="admin" />
+    </>
+  );
 };
 
 export default App;
