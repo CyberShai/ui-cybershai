@@ -1,5 +1,7 @@
 import React from "react";
 
+
+import { Icon } from "../atomic/atoms/Icons/Icon";
 import { Hired } from "../atomic/molecules/Hired/Hired";
 import Icon from "../assets/images/Icon.png";
 
