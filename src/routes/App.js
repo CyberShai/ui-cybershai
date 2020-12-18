@@ -1,13 +1,15 @@
 import React from "react";
 
-import { IconText } from "../atomic/atoms/IconText/IconText"
+import { UserInfo } from "../atomic/molecules/UserInfo/UserInfo";
+import Icon from "../assets/images/Icon.png";
 
 const App = () => {
-  return <>
-  <h3>Atomos Héctor</h3>
-  <IconText icon="github" text="Icono de Menú" link="#" color/>
-  <IconText icon="github" text="Icono de Menú" link="#" />
-  </>
+  return (
+    <>
+      <h3>Atomos Héctor</h3>
+      <UserInfo photo={Icon} name="David Flores" job="Frontend Developer" />
+    </>
+  );
 };
 
 export default App;

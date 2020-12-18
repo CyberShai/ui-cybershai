@@ -1,12 +1,13 @@
 @import "./variables.scss";
 @import "./globals.scss";
 
-
 //atoms
 @import "../../atomic/atoms/Icons/Icon.scss";
 @import "../../atomic/atoms/IconText/IconText.scss";
+@import "../../atomic/atoms/Avatar/Avatar.scss";
 
 //molecules
+@import "../../atomic/molecules/UserInfo/UserInfo.scss";
 
 //organisms
 
