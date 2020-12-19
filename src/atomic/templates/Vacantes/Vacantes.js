@@ -50,8 +50,6 @@ export const Vacantes = () => {
       <section className="grid-vacantes">
         <NewApply display={show} />
 
-        <button onClick={handleClose}>Mostrar modal aplicar</button>
-
         {data?.map((vacancy) => (
           <div key={`${vacancy._id}`}>
             <Card
