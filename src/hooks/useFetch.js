@@ -13,7 +13,7 @@ export const useFetchApi = (endpoint) => {
         setData({
           loading: false,
           error: null,
-          data: result.data.vacancies,
+          data: result.data,
         });
       });
   }, []);

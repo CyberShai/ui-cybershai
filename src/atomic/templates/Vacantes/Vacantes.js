@@ -2,14 +2,15 @@ import React, { useState } from "react";
 import { NewApply } from "../../organisms/NewApply/NewApply";
 import { Card } from "../../../atomic/organisms/Card/Card";
 import { SearchFilter } from "../../../atomic/molecules/SearchFilter/SearchFilter";
-import { MiniJobCard } from "../../../atomic/organisms/MiniJobCard/MiniJobCard";
 import { Alert } from "../../organisms/Alert/Alert";
 import { useFetchApi } from "../../../hooks/useFetch";
 export const Vacantes = () => {
-
-  const { data } = useFetchApi("vacancy/list");
+  let { data } = useFetchApi("vacancy/list");
+  if (data) {
+    data = data.vacancies;
+  }
   console.log(data);
-  
+
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(!show);
 
@@ -24,7 +25,6 @@ export const Vacantes = () => {
 
   return (
     <section className="layout__interno">
-
       <Alert alertType="sucess" active={alertShow} />
       <h2>Vacantes</h2>
       <h3>Bienvenido David Flores</h3>
@@ -62,7 +62,6 @@ export const Vacantes = () => {
             />
           </div>
         ))}
-
       </section>
     </section>
   );
