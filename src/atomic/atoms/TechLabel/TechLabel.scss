@@ -1,0 +1,18 @@
+.tech-label-container {
+  display: inline-block;
+  border-radius: 8px;
+
+  p {
+    padding: 8px 15px;
+  }
+}
+
+.tech-label-primary {
+  background-color: $secondary-lighter;
+}
+.tech-label-secondary {
+  background-color: $secondary-lightest;
+}
+.tech-label-tertiary {
+  background-color: $white;
+}
