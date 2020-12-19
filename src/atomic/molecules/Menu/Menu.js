@@ -30,10 +30,30 @@ export const Menu = ({ userType }) => {
   } else {
     return (
       <nav>
-        <IconText icon="suitcase" text="Vacantes" color="white" link="#" />
-        <IconText icon="building" text="Empresas" color="white" link="#" />
-        <IconText icon="chart" text="Estadísticas" color="white" link="#" />
-        <IconText icon="user" text="Colocación" color="white" link="#" />
+        <IconText
+          icon="suitcase"
+          text="Vacantes"
+          color="white"
+          link="/vacantes-admin"
+        />
+        <IconText
+          icon="building"
+          text="Empresas"
+          color="white"
+          link="/empresas-admin"
+        />
+        <IconText
+          icon="chart"
+          text="Estadísticas"
+          color="white"
+          link="/estadisticas"
+        />
+        <IconText
+          icon="user"
+          text="Colocación"
+          color="white"
+          link="/colocacion"
+        />
       </nav>
     );
   }
