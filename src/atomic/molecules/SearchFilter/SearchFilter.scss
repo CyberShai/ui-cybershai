@@ -1,0 +1,9 @@
+.searchfilter {
+  color: $secondary-darkest;
+  &-inputs {
+    margin-top: 8px;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+  }
+}
