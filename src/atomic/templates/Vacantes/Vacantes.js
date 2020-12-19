@@ -1,18 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { NewApply } from "../../organisms/NewApply/NewApply";
 import { Card } from "../../../atomic/organisms/Card/Card";
 import { SearchFilter } from "../../../atomic/molecules/SearchFilter/SearchFilter";
-import { MiniJobCard } from "../../../atomic/organisms/MiniJobCard/MiniJobCard";
 import { Alert } from "../../organisms/Alert/Alert";
 import { useFetchApi } from "../../../hooks/useFetch";
+import NewApplyContext from "../../../context/NewApplyContext";
 export const Vacantes = () => {
-
   const { data } = useFetchApi("vacancy/list");
   console.log(data);
-  
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(!show);
+  /* Hook para mostrar NewApply */
+  const { showed, setShowed } = useContext(NewApplyContext);
 
+  const handleClose = () => {
+    setShowed(showed === "hidden" ? "active" : "hidden");
+  };
   /* Hook para mostrar Alert */
   const [alertShow, setAlertShow] = useState(false);
   const handleAlert = () => {
@@ -24,7 +25,6 @@ export const Vacantes = () => {
 
   return (
     <section className="layout__interno">
-
       <Alert alertType="sucess" active={alertShow} />
       <h2>Vacantes</h2>
       <h3>Bienvenido David Flores</h3>
@@ -48,7 +48,7 @@ export const Vacantes = () => {
         Mostrar modal Vacante
       </button>
       <section className="grid-vacantes">
-        <NewApply display={show} />
+        <NewApply />
 
         <button onClick={handleClose}>Mostrar modal aplicar</button>
 
@@ -62,7 +62,6 @@ export const Vacantes = () => {
             />
           </div>
         ))}
-
       </section>
     </section>
   );
