@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { NewApply } from "../../organisms/NewApply/NewApply";
-import { Card } from "../../../atomic/organisms/Card/Card";
-import { MiniJobCard } from "../../../atomic/organisms/MiniJobCard/MiniJobCard";
+import { JobCardList } from "../../organisms/JobCardList/JobCardList";
 
 export const VacantesAdmin = () => {
   const [show, setShow] = useState(false);
@@ -12,14 +11,20 @@ export const VacantesAdmin = () => {
       <h2>Vacantes</h2>
       <h3>Bienvenida Shaili Zappa</h3>
       <p>Bienvenida. Vacantes abiertas al día de hoy.</p>
-      <section className="grid-vacantes">
+      <section>
         <NewApply display={show} />
-        <button onClick={handleClose}>Mostrar modal aplicar</button>
+        <button
+          className="button button__primary button-type__simple"
+          onClick={handleClose}
+        >
+          Nueva Vacante
+        </button>
         <div>
-          <MiniJobCard />
-        </div>
-        <div>
-          <Card />
+          <JobCardList company="Platzi" job="Frontend Developer" />
+          <JobCardList company="Platzi" job="Frontend Developer" />
+          <JobCardList company="Platzi" job="Frontend Developer" />
+          <JobCardList company="Platzi" job="Frontend Developer" />
+          <JobCardList company="Platzi" job="Frontend Developer" />
         </div>
       </section>
     </section>
