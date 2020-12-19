@@ -2,6 +2,7 @@ import React from "react";
 
 import { JobInfo } from "../../molecules/JobInfo/JobInfo";
 import Icon from "../../../assets/images/Icon.png";
+import { Card } from "../../organisms/Card/Card";
 
 export const Vacantes = () => {
   return (
@@ -21,6 +22,9 @@ export const Vacantes = () => {
         date="18/12/2020"
         location="México, CDMX"
       />
+      <div>
+        <Card />
+      </div>
     </section>
   );
 };
