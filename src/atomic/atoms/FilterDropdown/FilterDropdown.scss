@@ -1,0 +1,18 @@
+.filter-dropdown {
+  background-color: $white;
+  color: $secondary-darkest;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  border: none;
+  padding: 16px;
+  &__small {
+    width: 190px;
+    height: 48px;
+    font-size: 12px;
+  }
+  &__large {
+    width: 400px;
+    height: 54px;
+    font-size: 18px;
+  }
+}
