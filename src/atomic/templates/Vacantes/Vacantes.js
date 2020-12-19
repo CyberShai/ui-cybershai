@@ -3,14 +3,26 @@ import { NewApply } from "../../organisms/NewApply/NewApply";
 import { Card } from "../../../atomic/organisms/Card/Card";
 import { SearchFilter } from "../../../atomic/molecules/SearchFilter/SearchFilter";
 import { MiniJobCard } from "../../../atomic/organisms/MiniJobCard/MiniJobCard";
+import { Alert } from "../../organisms/Alert/Alert";
 import { JobCardList } from "../../../atomic/organisms/JobCardList/JobCardList";
 
 export const Vacantes = () => {
+  /* Hook para mostrar NewApply */
   const [show, setShow] = useState(false);
-
   const handleClose = () => setShow(!show);
+
+  /* Hook para mostrar Alert */
+  const [alertShow, setAlertShow] = useState(false);
+  const handleAlert = () => {
+    setAlertShow(true);
+    setTimeout(() => {
+      setAlertShow(false);
+    }, 2000);
+  };
+
   return (
     <section className="layout__interno">
+      <Alert alertType="sucess" active={alertShow} />
       <div>
         <JobCardList company="Platzi" job="Frontend developer" />
       </div>
@@ -23,9 +35,10 @@ export const Vacantes = () => {
       <section>
         <SearchFilter />
       </section>
+      <button onClick={handleAlert}>Mostrar modal Alerta</button>
+      <button onClick={handleClose}>Mostrar modal Vacante</button>
       <section className="grid-vacantes">
         <NewApply display={show} />
-        <button onClick={handleClose}>Mostrar modal aplicar</button>
         <div>
           <MiniJobCard />
         </div>
