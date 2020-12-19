@@ -23,10 +23,10 @@ export const Routes = () => {
           path="/informacion-personal"
           component={InformacionPersonalPage}
         />
-        <Route component={NotFoundPage} />
         {/* <Route exact path="/login" component={LoginPage} />
         <Route exact path="/signup" component={SignUpPage} />
-        */}
+      */}
+        <Route component={NotFoundPage} />
       </Switch>
     </BrowserRouter>
   );
