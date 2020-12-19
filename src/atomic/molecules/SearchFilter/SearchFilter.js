@@ -18,8 +18,8 @@ export const SearchFilter = () => {
       <p>Filtros de búsqueda:</p>
       <form className="searchfilter-inputs">
         <FilterDropdown options={options} />
-        <SimpleField placeholder="$ Min" />
-        <SimpleField placeholder="$ Max" />
+        <SimpleField placeholder="$ Min" size="small" />
+        <SimpleField placeholder="$ Max" size="small" />
         <FilterDropdown options={options} />
         <Search />
       </form>
