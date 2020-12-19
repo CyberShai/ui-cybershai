@@ -1,5 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
+import { NewApply } from "../../organisms/NewApply/NewApply";
 export const Vacantes = () => {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(!show);
   return (
     <section className="layout__interno">
       <h2>Vacantes</h2>
@@ -9,7 +13,8 @@ export const Vacantes = () => {
         hasta conseguir el trabajo de tus sueños.
       </p>
       <section className="grid-vacantes"></section>
-
+      <NewApply display={show} />
+      <button onClick={handleClose}>Aplicar</button>
     </section>
   );
 };
