@@ -20,10 +20,13 @@
 @import "../../atomic/molecules/Hired/Hired.scss";
 @import "../../atomic/molecules/JobInfo/JobInfo.scss";
 @import "../../atomic/molecules/SearchFilter/SearchFilter.scss";
+@import "../../atomic/molecules/CompanyName/CompanyName.scss";
 
 //organisms
 @import "../../atomic/organisms/SideBar/SideBar.scss";
 @import "../../atomic/organisms/Card/Card.scss";
+@import "../../atomic/organisms/CompanyCard/CompanyCard.scss";
 
 //templates
 @import "../../atomic/templates/Layout/Layout.scss";
+@import "../../atomic/templates/NotFound/NotFound.scss";
