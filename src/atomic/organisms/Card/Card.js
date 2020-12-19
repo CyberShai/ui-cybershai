@@ -6,7 +6,7 @@ import Shai from "../../../assets/images/cyberShai.png";
 import { TechLabel } from "../../../atomic/atoms/TechLabel/TechLabel";
 import { Button } from "../../../atomic/atoms/Button/Button";
 
-export const Card = ({ job, date, location, description }) => {
+export const Card = ({ job, date, location, description, ...props }) => {
   return (
     <div className="card-container">
       <div>
