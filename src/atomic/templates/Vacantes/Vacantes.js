@@ -3,6 +3,7 @@ import { NewApply } from "../../organisms/NewApply/NewApply";
 import { Card } from "../../../atomic/organisms/Card/Card";
 import { SearchFilter } from "../../../atomic/molecules/SearchFilter/SearchFilter";
 import { MiniJobCard } from "../../../atomic/organisms/MiniJobCard/MiniJobCard";
+import { JobCardList } from "../../../atomic/organisms/JobCardList/JobCardList";
 
 export const Vacantes = () => {
   const [show, setShow] = useState(false);
@@ -10,6 +11,9 @@ export const Vacantes = () => {
   const handleClose = () => setShow(!show);
   return (
     <section className="layout__interno">
+      <div>
+        <JobCardList company="Platzi" job="Frontend developer" />
+      </div>
       <h2>Vacantes</h2>
       <h3>Bienvenido David Flores</h3>
       <p>
