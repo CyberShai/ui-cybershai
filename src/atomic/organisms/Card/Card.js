@@ -20,17 +20,26 @@ export const Card = ({ job, date, location, description }) => {
       </div>
       <div className="card-container__description">{description}</div>
       <div className="card-container__tech-labels">
-        <div>
+        <div className="separacion">
           <TechLabel name="JavaScript" type="primary" />
         </div>
-        <div>
+        <div className="separacion">
           <TechLabel name="Node" type="primary" />
         </div>
       </div>
       <div className="card-container__avatar-list">
-        <Avatar photo={Shai} size="small" alt="cyber Shai" />
-        <Avatar photo={Shai} size="small" alt="cyber Shai" />
-        <Avatar photo={Shai} size="small" alt="cyber Shai" />
+        <div className="separacion">
+          <Avatar photo={Shai} size="small" alt="cyber Shai" />
+        </div>
+        <div className="separacion">
+          <Avatar photo={Shai} size="small" alt="cyber Shai" />
+        </div>
+        <div className="separacion">
+          <Avatar photo={Shai} size="small" alt="cyber Shai" />
+        </div>
+        <div className="separacion">
+          <Avatar photo={Shai} size="small" alt="cyber Shai" />
+        </div>
       </div>
       <div className="card-container__footer">
         <div className="separation">
