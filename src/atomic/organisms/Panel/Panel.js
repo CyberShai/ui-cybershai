@@ -49,7 +49,7 @@ export const Panel = ({ userType }) => {
           icon="logout"
           text="Log out"
           link="/vacantes-admin"
-          color="white"
+          color="dark"
         />
       </div>
     </section>
