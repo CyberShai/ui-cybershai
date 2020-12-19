@@ -66,3 +66,25 @@ a {
   font-size: 18px;
   font-weight: normal;
 }
+
+.layout__interno {
+  padding: 5%;
+  h2 {
+    color: $secondary-darkest;
+    margin-bottom: 16px;
+  }
+  h3,
+  p {
+    color: $secondary-dark;
+    margin-bottom: 8px;
+  }
+  .construction {
+    max-width: 40%;
+  }
+}
+
+.grid-vacantes {
+  display: grid;
+  grid-template-columns: 2;
+  grid-template-rows: 2;
+}
