@@ -13,6 +13,7 @@
 @import "../../atomic/atoms/UploadFile/UpluadFile.scss";
 @import "../../atomic/atoms/TechLabel/TechLabel.scss";
 @import "../../atomic/atoms/SimpleField/SimpleField.scss";
+@import "../../atomic/atoms/Stats/Stats.scss";
 
 //molecules
 @import "../../atomic/molecules/UserInfo/UserInfo.scss";
@@ -32,6 +33,8 @@
 @import "../../atomic/organisms/MiniJobCard/MiniJobCard.scss";
 @import "../../atomic/organisms/Alert/Alert.scss";
 @import "../../atomic/organisms/JobCardList/JobCardList.scss";
+@import "../../atomic/organisms/ListStats/ListStats.scss";
+@import "../../atomic/organisms/StudentBar/StudentBar.scss";
 
 //templates
 @import "../../atomic/templates/Layout/Layout.scss";

@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import { VacantesPage } from "../pages/VacantesPage";
 import { VacantesAdminPage } from "../pages/VacantesAdminPage";
+import { Estadisitcas } from "../pages/Estadisticas";
 import { EmpresasPage } from "../pages/EmpresasPage";
 import { MisPostulacionesPage } from "../pages/MisPostulacionesPage";
 import { NotFoundPage } from "../pages/NotFoundPage";
@@ -25,6 +26,7 @@ export const Routes = () => {
           component={InformacionPersonalPage}
         />
         <Route exact path="/vacantes-admin" component={VacantesAdminPage} />
+        <Route exact path="/estadisticas" component={Estadisitcas} />
         {/* <Route exact path="/login" component={LoginPage} />
         <Route exact path="/signup" component={SignUpPage} />
       */}
