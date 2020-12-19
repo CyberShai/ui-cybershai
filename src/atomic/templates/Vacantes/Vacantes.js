@@ -5,11 +5,15 @@ import { SearchFilter } from "../../../atomic/molecules/SearchFilter/SearchFilte
 import { Alert } from "../../organisms/Alert/Alert";
 import { useFetchApi } from "../../../hooks/useFetch";
 import NewApplyContext from "../../../context/NewApplyContext";
+
 export const Vacantes = () => {
-  const { data } = useFetchApi("vacancy/list");
-  console.log(data);
   /* Hook para mostrar NewApply */
   const { showed, setShowed } = useContext(NewApplyContext);
+  let { data } = useFetchApi("vacancy/list");
+  if (data) {
+    data = data.vacancies;
+  }
+  console.log(data);
 
   const handleClose = () => {
     setShowed(showed === "hidden" ? "active" : "hidden");
