@@ -5,10 +5,16 @@ import { Icon } from "../Icons/Icon";
 
 export const IconText = ({ icon, text, link, color }) => {
   let colorFont;
-  if (color) {
-    colorFont = "__white";
-  } else {
-    colorFont = "__black";
+  switch (color) {
+    case "white":
+      colorFont = "__white";
+      break;
+    case "dark":
+      colorFont = "__black";
+      break;
+    case "primary":
+      colorFont = "__primary";
+      break;
   }
 
   return (
