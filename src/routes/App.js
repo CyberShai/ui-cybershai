@@ -1,15 +1,9 @@
 import React from "react";
 
-import { Hired } from "../atomic/molecules/Hired/Hired";
-import Icon from "../assets/images/Icon.png";
+import { Routes } from "./Routes";
 
 const App = () => {
-  return (
-    <>
-      <h3>Atomos Héctor</h3>
-      <Hired photo1={Icon} photo2={Icon} photo3={Icon} company="Platzi" />
-    </>
-  );
+  return <Routes />;
 };
 
 export default App;
