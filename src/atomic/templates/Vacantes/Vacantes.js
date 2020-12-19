@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
+import { NewApply } from "../../organisms/NewApply/NewApply";
 import { Card } from "../../../atomic/organisms/Card/Card";
 import { SearchFilter } from "../../../atomic/molecules/SearchFilter/SearchFilter";
 
 export const Vacantes = () => {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(!show);
   return (
     <section className="layout__interno">
       <h2>Vacantes</h2>
@@ -15,6 +19,8 @@ export const Vacantes = () => {
         <SearchFilter />
       </section>
       <section className="grid-vacantes">
+        <NewApply display={show} />
+        <button onClick={handleClose}>Mostrar modal aplicar</button>
         <div>
           <Card />
         </div>
