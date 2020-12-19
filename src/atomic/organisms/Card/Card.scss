@@ -9,17 +9,16 @@
     padding: 20px 0px;
   }
 
-  .mockClass {
+  &__tech-labels {
     display: flex;
-    .separation {
-      margin-right: 7px;
-    }
   }
 
-  .buttons {
+  &__avatar-list {
+    margin: 20px 0px;
+  }
+
+  &__footer {
     display: flex;
-    .separation {
-      margin-right: 7px;
-    }
+    justify-content: space-around;
   }
 }

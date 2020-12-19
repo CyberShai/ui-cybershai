@@ -1,6 +1,7 @@
 import React from "react";
 import { JobInfo } from "../../molecules/JobInfo/JobInfo";
 import Icon from "../../../assets/images/Icon.png";
+import Shai from "../../../assets/images/cyberShai.png";
 import { TechLabel } from "../../../atomic/atoms/TechLabel/TechLabel";
 import { Avatar } from "../../../atomic/atoms/Avatar/Avatar";
 import { Button } from "../../../atomic/atoms/Button/Button";
@@ -18,18 +19,20 @@ export const Card = ({ job, date, location, description }) => {
         ></JobInfo>
       </div>
       <div className="card-container__description">{description}</div>
-      <div className="mockClass">
-        <div className="separation">
+      <div className="card-container__tech-labels">
+        <div>
           <TechLabel name="JavaScript" type="primary" />
         </div>
         <div>
           <TechLabel name="Node" type="primary" />
         </div>
       </div>
-      <div>
-        <Avatar />
+      <div className="card-container__avatar-list">
+        <Avatar photo={Shai} size="small" alt="cyber Shai" />
+        <Avatar photo={Shai} size="small" alt="cyber Shai" />
+        <Avatar photo={Shai} size="small" alt="cyber Shai" />
       </div>
-      <div className="buttons">
+      <div className="card-container__footer">
         <div className="separation">
           <Button
             label="Aplicar ahora"
@@ -39,7 +42,7 @@ export const Card = ({ job, date, location, description }) => {
         </div>
         <div>
           <Button
-            label="Aplicar ahora"
+            label="Ver detalles"
             backgroundColor="secondary"
             type="simple"
           />
