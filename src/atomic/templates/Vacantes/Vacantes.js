@@ -1,6 +1,7 @@
 import React from "react";
 import { Card } from "../../../atomic/organisms/Card/Card";
 import { SearchFilter } from "../../../atomic/molecules/SearchFilter/SearchFilter";
+import { MiniJobCard } from "../../../atomic/organisms/MiniJobCard/MiniJobCard";
 
 export const Vacantes = () => {
   return (
@@ -16,7 +17,7 @@ export const Vacantes = () => {
       </section>
       <section className="grid-vacantes">
         <div>
-          <Card />
+          <MiniJobCard />
         </div>
         <div>
           <Card />
