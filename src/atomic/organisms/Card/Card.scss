@@ -3,23 +3,29 @@
   border-radius: 10px;
   padding: 32px;
   display: inline-block;
-  box-shadow: 0px 0px 18px 1px #888888;
+  box-shadow: 0px 4px 4px 0px #888888;
 
   &__description {
     padding: 20px 0px;
   }
 
-  .mockClass {
+  &__tech-labels {
     display: flex;
-    .separation {
-      margin-right: 7px;
+    div {
+      margin-right: 4px;
     }
   }
 
-  .buttons {
+  &__avatar-list {
+    margin: 20px 0px;
+  }
+
+  &__footer {
     display: flex;
-    .separation {
-      margin-right: 7px;
-    }
+    justify-content: space-around;
+  }
+  .hired {
+    margin-top: 16px;
+    margin-bottom: 24px;
   }
 }

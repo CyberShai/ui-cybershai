@@ -76,7 +76,7 @@ a {
   h3,
   p {
     color: $secondary-dark;
-    margin-bottom: 8px;
+    // margin-bottom: 8px;
   }
   .construction {
     max-width: 40%;
@@ -85,6 +85,8 @@ a {
 
 .grid-vacantes {
   display: grid;
-  grid-template-columns: 2;
-  grid-template-rows: 2;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  margin-top: 36px;
+  grid-gap: 40px;
 }

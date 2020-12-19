@@ -1,8 +1,9 @@
 import React from "react";
 import { JobInfo } from "../../molecules/JobInfo/JobInfo";
+import { Hired } from "../../molecules/Hired/Hired";
 import Icon from "../../../assets/images/Icon.png";
+import Shai from "../../../assets/images/cyberShai.png";
 import { TechLabel } from "../../../atomic/atoms/TechLabel/TechLabel";
-import { Avatar } from "../../../atomic/atoms/Avatar/Avatar";
 import { Button } from "../../../atomic/atoms/Button/Button";
 
 export const Card = ({ job, date, location, description }) => {
@@ -18,18 +19,16 @@ export const Card = ({ job, date, location, description }) => {
         ></JobInfo>
       </div>
       <div className="card-container__description">{description}</div>
-      <div className="mockClass">
-        <div className="separation">
+      <div className="card-container__tech-labels">
+        <div>
           <TechLabel name="JavaScript" type="primary" />
         </div>
         <div>
           <TechLabel name="Node" type="primary" />
         </div>
       </div>
-      <div>
-        <Avatar />
-      </div>
-      <div className="buttons">
+      <Hired photo1={Shai} photo2={Shai} photo3={Shai} company="Platzi" />
+      <div className="card-container__footer">
         <div className="separation">
           <Button
             label="Aplicar ahora"
@@ -39,7 +38,7 @@ export const Card = ({ job, date, location, description }) => {
         </div>
         <div>
           <Button
-            label="Aplicar ahora"
+            label="Ver detalles"
             backgroundColor="secondary"
             type="simple"
           />
