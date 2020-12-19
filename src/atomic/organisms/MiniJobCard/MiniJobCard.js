@@ -31,7 +31,7 @@ export const MiniJobCard = ({ job, date, location, datePublish, dateAdd }) => {
             type="simple"
           />
         </div>
-        <div>
+        <div className="separation">
           <Button
             label="Ver detalles"
             backgroundColor="secondary"

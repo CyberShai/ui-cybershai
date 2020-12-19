@@ -4,6 +4,7 @@ import { Card } from "../../../atomic/organisms/Card/Card";
 import { SearchFilter } from "../../../atomic/molecules/SearchFilter/SearchFilter";
 import { MiniJobCard } from "../../../atomic/organisms/MiniJobCard/MiniJobCard";
 import { Alert } from "../../organisms/Alert/Alert";
+import { JobCardList } from "../../../atomic/organisms/JobCardList/JobCardList";
 
 export const Vacantes = () => {
   /* Hook para mostrar NewApply */
@@ -22,6 +23,9 @@ export const Vacantes = () => {
   return (
     <section className="layout__interno">
       <Alert alertType="sucess" active={alertShow} />
+      <div>
+        <JobCardList company="Platzi" job="Frontend developer" />
+      </div>
       <h2>Vacantes</h2>
       <h3>Bienvenido David Flores</h3>
       <p>
