@@ -11,6 +11,9 @@
 
   &__tech-labels {
     display: flex;
+    div {
+      margin-right: 4px;
+    }
   }
 
   &__avatar-list {
@@ -20,5 +23,9 @@
   &__footer {
     display: flex;
     justify-content: space-around;
+  }
+  .hired {
+    margin-top: 16px;
+    margin-bottom: 24px;
   }
 }

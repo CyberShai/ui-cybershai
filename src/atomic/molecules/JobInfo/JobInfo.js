@@ -22,8 +22,13 @@ export const JobInfo = ({ photo, position, job, date, location }) => {
             <div>
               <h3>{job}</h3>
               <div className="job-info__meta">
-                <IconText icon="location" text={location} link="#" />
-                <IconText icon="check" text="Remoto" link="#" />
+                <IconText
+                  icon="location"
+                  text={location}
+                  link="#"
+                  color="dark"
+                />
+                <IconText icon="check" text="Remoto" link="#" color="dark" />
               </div>
             </div>
             <h5>{date}</h5>
@@ -33,9 +38,9 @@ export const JobInfo = ({ photo, position, job, date, location }) => {
           <>
             <h3>{job}</h3>
             <div className="job-info__meta-vertical">
-              <IconText icon="location" text={location} link="#" />
+              <IconText icon="location" text={location} link="#" color="dark" />
 
-              <IconText icon="check" text="Remoto" link="#" />
+              <IconText icon="check" text="Remoto" link="#" color="dark" />
 
               <h5>{date}</h5>
             </div>
