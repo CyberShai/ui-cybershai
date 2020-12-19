@@ -1,19 +1,20 @@
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
 
-import { Icon } from "../Icons/Icon"
+import { Icon } from "../Icons/Icon";
 
-export const IconText = ({icon, text, link, color}) => {
+export const IconText = ({ icon, text, link, color }) => {
   let colorFont;
   if (color) {
-    colorFont = "__white"
+    colorFont = "__white";
   } else {
     colorFont = "__black";
   }
-  
+
   return (
-    <a className={`icon-text${colorFont}`}>
-    <Icon svg={icon} classes="svg-icon__big" title={icon} />
-    {text}
-    </a>
-  )
-}
+    <Link className={`icon-text${colorFont} link`} to={link}>
+      <Icon svg={icon} classes="svg-icon__big" title={icon} />
+      {text}
+    </Link>
+  );
+};
