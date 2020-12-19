@@ -1,0 +1,21 @@
+.mini-job-card-container {
+  border-radius: 10px;
+  background-color: $white;
+  padding: 16px 16px;
+
+  &__dates {
+    display: flex;
+    margin: 20px 0px;
+    div p {
+      font-size: 14px;
+      margin-right: 10px;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    .separation {
+      margin-right: 10px;
+    }
+  }
+}

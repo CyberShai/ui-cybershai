@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { NewApply } from "../../organisms/NewApply/NewApply";
 import { Card } from "../../../atomic/organisms/Card/Card";
 import { SearchFilter } from "../../../atomic/molecules/SearchFilter/SearchFilter";
+import { MiniJobCard } from "../../../atomic/organisms/MiniJobCard/MiniJobCard";
 
 export const Vacantes = () => {
   const [show, setShow] = useState(false);
@@ -22,7 +23,7 @@ export const Vacantes = () => {
         <NewApply display={show} />
         <button onClick={handleClose}>Mostrar modal aplicar</button>
         <div>
-          <Card />
+          <MiniJobCard />
         </div>
         <div>
           <Card />
