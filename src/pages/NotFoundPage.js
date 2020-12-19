@@ -1,5 +1,7 @@
 import React from "react";
 
+import { NotFound } from "../atomic/templates/NotFound/Notfound";
+
 export const NotFoundPage = () => {
-  return <h2>No encontramos nada</h2>;
+  return <NotFound />;
 };
