@@ -1,0 +1,15 @@
+.stats-container {
+  margin: 0px 30px;
+  &__title {
+  }
+  &__number {
+    display: flex;
+    align-items: center;
+    h2 {
+      margin: 0px;
+    }
+    p {
+      margin-left: 10px;
+    }
+  }
+}
