@@ -1,50 +1,63 @@
-import React from "react";
+import React, { useContext } from "react";
 import { JobInfo } from "../../molecules/JobInfo/JobInfo";
 import { Hired } from "../../molecules/Hired/Hired";
 import Icon from "../../../assets/images/Icon.png";
 import Shai from "../../../assets/images/cyberShai.png";
 import { TechLabel } from "../../../atomic/atoms/TechLabel/TechLabel";
 import { Button } from "../../../atomic/atoms/Button/Button";
+import { NewApply } from "../../organisms/NewApply/NewApply";
+
+import NewApplyContext from "../../../context/NewApplyContext";
 
 export const Card = ({ job, date, location, description, ...props }) => {
+  /* Hook para mostrar NewApply */
+  const { showed, setShowed } = useContext(NewApplyContext);
+
+  const handleClose = () => {
+    setShowed(showed === "hidden" ? "active" : "hidden");
+  };
+
   return (
-    <div className="card-container">
-      <div>
-        <JobInfo
-          position="vertical"
-          photo={Icon}
-          job={job}
-          date={date}
-          location={location}
-        ></JobInfo>
-      </div>
-      <div className="card-container__description">{description}</div>
-      <div className="card-container__tech-labels">
+    <>
+      <NewApply />
+      <div className="card-container">
         <div>
-          <TechLabel name="JavaScript" type="primary" />
+          <JobInfo
+            position="vertical"
+            photo={Icon}
+            job={job}
+            date={date}
+            location={location}
+          ></JobInfo>
         </div>
-        <div>
-          <TechLabel name="Node" type="primary" />
+        <div className="card-container__description">{description}</div>
+        <div className="card-container__tech-labels">
+          <div>
+            <TechLabel name="JavaScript" type="primary" />
+          </div>
+          <div>
+            <TechLabel name="Node" type="primary" />
+          </div>
+        </div>
+        <Hired photo1={Shai} photo2={Shai} photo3={Shai} company="Platzi" />
+        <div className="card-container__footer">
+          <div className="separation" onClick={handleClose}>
+            <Button
+              label="Aplicar ahora"
+              backgroundColor="primary"
+              type="simple"
+            />
+          </div>
+          <div>
+            <Button
+              label="Ver detalles"
+              backgroundColor="secondary"
+              type="simple"
+            />
+          </div>
         </div>
       </div>
-      <Hired photo1={Shai} photo2={Shai} photo3={Shai} company="Platzi" />
-      <div className="card-container__footer">
-        <div className="separation">
-          <Button
-            label="Aplicar ahora"
-            backgroundColor="primary"
-            type="simple"
-          />
-        </div>
-        <div>
-          <Button
-            label="Ver detalles"
-            backgroundColor="secondary"
-            type="simple"
-          />
-        </div>
-      </div>
-    </div>
+    </>
   );
 };
 
