@@ -18,7 +18,12 @@ export const Panel = ({ userType }) => {
         {/* Notification Cards */}
       </div>
       <div className="panel-logout">
-        <IconText icon="logout" text="Log out" link="#" color="white" />
+        <IconText
+          icon="logout"
+          text="Log out"
+          link="/vacantes-admin"
+          color="white"
+        />
       </div>
     </section>
   );
