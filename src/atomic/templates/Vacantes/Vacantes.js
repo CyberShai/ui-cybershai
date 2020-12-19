@@ -33,7 +33,7 @@ export const Vacantes = () => {
               job={vacancy.name}
               date={vacancy.modified}
               location={vacancy.vacancy_category.name}
-              description="vacancy_category.description"
+              description={vacancy.vacancy_category.description}
             />
           </div>
         ))}
