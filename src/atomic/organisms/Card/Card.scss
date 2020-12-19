@@ -11,10 +11,17 @@
 
   &__tech-labels {
     display: flex;
+    .separacion {
+      margin-right: 5px;
+    }
   }
 
   &__avatar-list {
+    display: flex;
     margin: 20px 0px;
+    .separacion {
+      margin-right: 5px;
+    }
   }
 
   &__footer {
