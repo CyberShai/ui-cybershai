@@ -1,5 +1,4 @@
 import React from "react";
-
 export const Vacantes = () => {
   return (
     <section className="layout__interno">
@@ -10,6 +9,7 @@ export const Vacantes = () => {
         hasta conseguir el trabajo de tus sueños.
       </p>
       <section className="grid-vacantes"></section>
+
     </section>
   );
 };
