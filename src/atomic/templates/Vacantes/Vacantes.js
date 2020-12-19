@@ -2,18 +2,18 @@ import React, { useState } from "react";
 import { NewApply } from "../../organisms/NewApply/NewApply";
 import { Card } from "../../../atomic/organisms/Card/Card";
 import { SearchFilter } from "../../../atomic/molecules/SearchFilter/SearchFilter";
-import { MiniJobCard } from "../../../atomic/organisms/MiniJobCard/MiniJobCard";
-import { JobCardList } from "../../../atomic/organisms/JobCardList/JobCardList";
+// import { MiniJobCard } from "../../../atomic/organisms/MiniJobCard/MiniJobCard";
+import { useFetchApi } from "../../../hooks/useFetch";
 
 export const Vacantes = () => {
+  const { data } = useFetchApi();
+  console.log(data);
+
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(!show);
   return (
     <section className="layout__interno">
-      <div>
-        <JobCardList company="Platzi" job="Frontend developer" />
-      </div>
       <h2>Vacantes</h2>
       <h3>Bienvenido David Flores</h3>
       <p>
@@ -26,12 +26,12 @@ export const Vacantes = () => {
       <section className="grid-vacantes">
         <NewApply display={show} />
         <button onClick={handleClose}>Mostrar modal aplicar</button>
-        <div>
-          <MiniJobCard />
-        </div>
-        <div>
-          <Card />
-        </div>
+
+        {data?.map((serie, index) => (
+          <div key={`vacante-${index}`}>
+            <Card job="{}" date="{}" location="" description="" />
+          </div>
+        ))}
       </section>
     </section>
   );
