@@ -4,7 +4,6 @@ import { Card } from "../../../atomic/organisms/Card/Card";
 import { SearchFilter } from "../../../atomic/molecules/SearchFilter/SearchFilter";
 import { MiniJobCard } from "../../../atomic/organisms/MiniJobCard/MiniJobCard";
 import { Alert } from "../../organisms/Alert/Alert";
-import { JobCardList } from "../../../atomic/organisms/JobCardList/JobCardList";
 import { useFetchApi } from "../../../hooks/useFetch";
 export const Vacantes = () => {
 
@@ -27,10 +26,6 @@ export const Vacantes = () => {
     <section className="layout__interno">
 
       <Alert alertType="sucess" active={alertShow} />
-      <div>
-        <JobCardList company="Platzi" job="Frontend developer" />
-      </div>
-
       <h2>Vacantes</h2>
       <h3>Bienvenido David Flores</h3>
       <p>
@@ -40,8 +35,18 @@ export const Vacantes = () => {
       <section>
         <SearchFilter />
       </section>
-      <button onClick={handleAlert}>Mostrar modal Alerta</button>
-      <button onClick={handleClose}>Mostrar modal Vacante</button>
+      <button
+        className="button button__primary button-type__simple"
+        onClick={handleAlert}
+      >
+        Mostrar modal Alerta
+      </button>
+      <button
+        className="button button__primary button-type__simple"
+        onClick={handleClose}
+      >
+        Mostrar modal Vacante
+      </button>
       <section className="grid-vacantes">
         <NewApply display={show} />
 

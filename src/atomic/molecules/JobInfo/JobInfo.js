@@ -5,13 +5,11 @@ import { IconText } from "../../atoms/IconText/IconText";
 
 export const JobInfo = ({ photo, position, job, date, location }) => {
   let flex;
-  console.log(position);
   if (position === "vertical") {
     flex = "--vertical";
   } else {
     flex = "--horizontal";
   }
-  console.log(flex);
 
   return (
     <div className={`job-info__container${flex}`}>
