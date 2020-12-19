@@ -1,19 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { NewApply } from "../../organisms/NewApply/NewApply";
 import { Card } from "../../../atomic/organisms/Card/Card";
 import { SearchFilter } from "../../../atomic/molecules/SearchFilter/SearchFilter";
 import { Alert } from "../../organisms/Alert/Alert";
 import { useFetchApi } from "../../../hooks/useFetch";
+import NewApplyContext from "../../../context/NewApplyContext";
+
 export const Vacantes = () => {
+  /* Hook para mostrar NewApply */
+  const { showed, setShowed } = useContext(NewApplyContext);
   let { data } = useFetchApi("vacancy/list");
   if (data) {
     data = data.vacancies;
   }
   console.log(data);
 
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(!show);
-
+  const handleClose = () => {
+    setShowed(showed === "hidden" ? "active" : "hidden");
+  };
   /* Hook para mostrar Alert */
   const [alertShow, setAlertShow] = useState(false);
   const handleAlert = () => {
@@ -48,7 +52,7 @@ export const Vacantes = () => {
         Mostrar modal Vacante
       </button>
       <section className="grid-vacantes">
-        <NewApply display={show} />
+        <NewApply />
 
         {data?.map((vacancy) => (
           <div key={`${vacancy._id}`}>
