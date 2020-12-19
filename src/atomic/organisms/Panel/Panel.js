@@ -12,6 +12,14 @@ export const Panel = ({ userType }) => {
   } else {
     user = "--white";
   }
+
+  let goPanel;
+  if (userType === "student") {
+    goPanel = "/vacantes-admin";
+  } else {
+    goPanel = "/";
+  }
+
   return (
     <section className={`panel${user}`}>
       <div>
@@ -45,12 +53,7 @@ export const Panel = ({ userType }) => {
         />
       </div>
       <div className="panel-logout">
-        <IconText
-          icon="logout"
-          text="Log out"
-          link="/vacantes-admin"
-          color="dark"
-        />
+        <IconText icon="logout" text="Log out" link={goPanel} color="dark" />
       </div>
     </section>
   );
