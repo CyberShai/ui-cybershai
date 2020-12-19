@@ -1,0 +1,20 @@
+.notification-card {
+  margin-top: 16px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  border-radius: 16px;
+  color: $secondary-darkest;
+  &__green {
+    background-color: $primary-lighter;
+  }
+  &__yellow {
+    background-color: $warning;
+  }
+  &__red {
+    background-color: $danger;
+  }
+  &__blue {
+    background-color: $secondary-lightest;
+  }
+}
