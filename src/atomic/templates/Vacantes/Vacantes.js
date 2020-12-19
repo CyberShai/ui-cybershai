@@ -6,7 +6,7 @@ import { SearchFilter } from "../../../atomic/molecules/SearchFilter/SearchFilte
 import { useFetchApi } from "../../../hooks/useFetch";
 
 export const Vacantes = () => {
-  const { data } = useFetchApi();
+  const { data } = useFetchApi("vacancy/list");
   console.log(data);
 
   const [show, setShow] = useState(false);
@@ -27,9 +27,14 @@ export const Vacantes = () => {
         <NewApply display={show} />
         <button onClick={handleClose}>Mostrar modal aplicar</button>
 
-        {data?.map((serie, index) => (
-          <div key={`vacante-${index}`}>
-            <Card job="{}" date="{}" location="" description="" />
+        {data?.map((vacancy) => (
+          <div key={`${vacancy._id}`}>
+            <Card
+              job={vacancy.name}
+              date={vacancy.modified}
+              location={vacancy.vacancy_category.name}
+              description="vacancy_category.description"
+            />
           </div>
         ))}
       </section>
