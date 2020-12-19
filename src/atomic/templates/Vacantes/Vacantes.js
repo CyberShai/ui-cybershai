@@ -5,9 +5,12 @@ import { SearchFilter } from "../../../atomic/molecules/SearchFilter/SearchFilte
 import { MiniJobCard } from "../../../atomic/organisms/MiniJobCard/MiniJobCard";
 import { Alert } from "../../organisms/Alert/Alert";
 import { JobCardList } from "../../../atomic/organisms/JobCardList/JobCardList";
-
+import { useFetchApi } from "../../../hooks/useFetch";
 export const Vacantes = () => {
-  /* Hook para mostrar NewApply */
+
+  const { data } = useFetchApi("vacancy/list");
+  console.log(data);
+  
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(!show);
 
@@ -22,10 +25,12 @@ export const Vacantes = () => {
 
   return (
     <section className="layout__interno">
+
       <Alert alertType="sucess" active={alertShow} />
       <div>
         <JobCardList company="Platzi" job="Frontend developer" />
       </div>
+
       <h2>Vacantes</h2>
       <h3>Bienvenido David Flores</h3>
       <p>
@@ -39,12 +44,20 @@ export const Vacantes = () => {
       <button onClick={handleClose}>Mostrar modal Vacante</button>
       <section className="grid-vacantes">
         <NewApply display={show} />
-        <div>
-          <MiniJobCard />
-        </div>
-        <div>
-          <Card />
-        </div>
+
+        <button onClick={handleClose}>Mostrar modal aplicar</button>
+
+        {data?.map((vacancy) => (
+          <div key={`${vacancy._id}`}>
+            <Card
+              job={vacancy.name}
+              date={vacancy.modified}
+              location={vacancy.vacancy_category.name}
+              description={vacancy.vacancy_category.description}
+            />
+          </div>
+        ))}
+
       </section>
     </section>
   );
